@@ -21,44 +21,57 @@
     </div>
         <?php
 
-$dir = __DIR__ . "/Fotos_locaties/*.jpg";
-$images = glob($dir);
+        $dir = __DIR__ . "/Fotos_locaties/*.jpg";
+        $images = glob($dir);
 
-?>
+        ?>
 
-<div>
-    <?php foreach ($images as $index => $image): ?>
+    <div>
+    <?php 
+        
+        foreach ($images as $index => $image): ?>
         <?php $filename = basename($image); ?>
-
+        
         <img 
             class="slide"
             src="Fotos_locaties/<?php echo $filename; ?>"
             style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;"
             width="500"
         >
+                
+    <?php 
 
-    <?php endforeach; ?>
-</div>
 
-<script>
-    let slides = document.querySelectorAll(".slide");
-    let huidigeFoto = 0;
+    endforeach; ?>
+    </div>
 
-    setInterval(function () {
+    <script>
+        let slides = document.querySelectorAll(".slide");
+        let huidigeFoto = 0;
 
-        slides[huidigeFoto].style.display = "none";
+        setInterval(function () {
 
-        huidigeFoto++;
+            
+            slides[huidigeFoto].style.opacity = 0;
+        setTimeout(function () {
+            slides[huidigeFoto].style.display = "none";
+            huidigeFoto++;
 
-        if (huidigeFoto >= slides.length) {
-            huidigeFoto = 0;
-        }
+            if (huidigeFoto >= slides.length) {
+                huidigeFoto = 0;
+            }
+            slides[huidigeFoto].style.display = "block";
+            slides[huidigeFoto].style.opacity = 1;
+        }, 1000);
+            
+            
 
-        slides[huidigeFoto].style.display = "block";
+        
 
-    }, 3000);
-</script>
-        <!-- <img src="/Fotos_locaties/achtergrond.jpg" alt="curiolocatieachtergrond foto"> -->
+            
+
+        }, 4000);
+    </script>
     <main id="opleiding">
         <div class="container">
             <div class="box">
