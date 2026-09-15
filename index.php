@@ -19,7 +19,46 @@
             <a href="#rooster">Rooster</a>
         </nav> 
     </div>
-    <img src="/Fotos_locaties/achtergrond.png" alt="curiolocatieachtergrond foto">
+        <?php
+
+$dir = __DIR__ . "/Fotos_locaties/*.jpg";
+$images = glob($dir);
+
+?>
+
+<div>
+    <?php foreach ($images as $index => $image): ?>
+        <?php $filename = basename($image); ?>
+
+        <img 
+            class="slide"
+            src="Fotos_locaties/<?php echo $filename; ?>"
+            style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;"
+            width="500"
+        >
+
+    <?php endforeach; ?>
+</div>
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let huidigeFoto = 0;
+
+    setInterval(function () {
+
+        slides[huidigeFoto].style.display = "none";
+
+        huidigeFoto++;
+
+        if (huidigeFoto >= slides.length) {
+            huidigeFoto = 0;
+        }
+
+        slides[huidigeFoto].style.display = "block";
+
+    }, 3000);
+</script>
+        <!-- <img src="/Fotos_locaties/achtergrond.jpg" alt="curiolocatieachtergrond foto"> -->
     <main id="opleiding">
         <div class="container">
             <div class="box">
