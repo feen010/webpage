@@ -173,6 +173,14 @@
                 <img src="Rooster.png" alt="Voorbeeld van een weekrooster van de opleiding Software Developer">
             </section>
         </div>
+
+
+       
     </main>
+     <footer>
+            <div class="copyrightfooter">
+                <p>©Finn Lagendijk</p>
+            </div>
+        </footer>
 </body>
 </html>

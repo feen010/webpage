@@ -6,13 +6,15 @@ body {
     margin: 0;
     font-family: 'Felix', sans-serif;
     color: #003b7a;
+    
 }
 
 header,
 .navbar,
 main {
     max-width: 1120px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
@@ -95,4 +97,15 @@ main {
 .rooster img {
     width: 100%;
     margin-top: 20px;
+}
+  
+.copyrightfooter { 
+    
+    flex-grow: 1;
+    background-color: #2ADD5D;
+    border-radius: 2;
+    padding: 3px;
+}
+.copyrightfooter > p {
+    color: white;
 }
