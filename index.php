@@ -62,7 +62,7 @@
             }
             slides[huidigeFoto].style.display = "block";
             slides[huidigeFoto].style.opacity = 1;
-        }, 1000);
+        }, 3000);
             
             
 
@@ -70,7 +70,7 @@
 
             
 
-        }, 4000);
+        }, 6000);
     </script>
     <main id="opleiding">
         <div class="container">
@@ -152,6 +152,19 @@
                 </p>
             </div>
         </div>
+        <div class="sfeer">
+            <section class="realm-section" id="rooster">
+                <h2>De sfeer</h2>
+
+                <p>
+                    In de klas hangt een gezellige en fijne sfeer.
+                    Iedereen kan over het algemeen goed met elkaar opschieten en helpt elkaar bij opdrachten.
+                    Er wordt natuurlijk serieus gewerkt, maar er is ook genoeg ruimte voor een grapje.
+                    Daardoor is het een prettige klas om in te werken en samen te leren.
+                </p>
+ 
+            </section>
+        </div>
         <div class="rooster">
             <section class="schedule-section" id="rooster">
                 <h2>Hoe ziet een schoolweek eruit?</h2>
@@ -179,7 +192,7 @@
     </main>
      <footer>
             <div class="copyrightfooter">
-                <p>©Finn Lagendijk</p>
+                <p>© Software Developer</p>
             </div>
         </footer>
 </body>

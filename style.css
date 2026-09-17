@@ -85,7 +85,13 @@ main {
     padding: 40px;
     border-radius: 10px;
 }
-
+.sfeer{
+    margin-top: 60px;
+    background-color: #063f86;
+    padding: 40px;
+    border-radius: 10px; 
+    color: white;
+}
 .rooster h2 {
     font-size: 36px;
 }
@@ -102,10 +108,50 @@ main {
 .copyrightfooter { 
     
     flex-grow: 1;
-    background-color: #2ADD5D;
-    border-radius: 2;
+    background-color: #063f86;
+    border-radius: 2px;
     padding: 3px;
 }
 .copyrightfooter > p {
     color: white;
+}
+
+/* responive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .rooster {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .rooster h2 {
+        font-size: 30px;
+    }
+
+    .slide {
+        height: 300px;
+        object-fit: cover;
+    }
 }
